@@ -30,10 +30,19 @@ html {
     text-align: center;
   }
   
-  header p {
+    header {
+        display: flex;
+        background-color: lightgray;
+        margin: auto;
+        width: 100%;
+        border: 10px solid gray;
+        padding: 10px;
+    }
+
+    header #title {
     font-size: 1.3rem;
-    font-weight: bold;
-    text-align: center;
+        justify-self: left;
+        margin-left: 5%
   }
   
   #plantForm {
