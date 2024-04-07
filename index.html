@@ -7,10 +7,6 @@
     </head>
     <script>
 
-        //const plantForm = document.getElementById("plantForm");
-        //form.addEventListener("submit", pickPlants);
-
-
         async function pickPlants(event) {
             const response = await fetch("/json/plants.json");
             const allPlants = await response.json();
