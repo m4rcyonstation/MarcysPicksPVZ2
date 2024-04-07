@@ -1,15 +1,15 @@
 {
   "plants": {
     "peashooter": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "sunflower": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "wallnut": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "potatomine": {
@@ -17,7 +17,7 @@
       "tags": []
     },
     "cabbagepult": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
 
@@ -36,11 +36,11 @@
 
     },
     "twinsunflower": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "bonkchoy": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "repeater": {
@@ -50,7 +50,7 @@
 
 
     "kernelpult": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "snapdragon": {
@@ -58,7 +58,7 @@
       "tags": []
     },
     "spikeweed": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "coconutcannon": {
@@ -123,7 +123,7 @@
       "tags": []
     },
     "chardguard": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "stunion": {
@@ -131,7 +131,7 @@
       "tags": []
     },
     "rotobaga": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
 
@@ -149,7 +149,7 @@
       "tags": []
     },
     "stallia": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "goldleaf": {
@@ -209,6 +209,31 @@
       "tags": []
     },
 
+    "phatbeet": {
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
+      "tags": []
+    },
+
+    "celerystalker": {
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
+      "tags": []
+    },
+
+    "thymewarp": {
+      "mods": [ "vnl", "auz", "rfl" ],
+      "tags": []
+    },
+
+    "sporeshroom": {
+      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "tags": []
+    },
+
+    "intensivecarrot": {
+      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "tags": []
+    },
+
     "primalpeashooter": {
       "mods": [ "vnl", "auz", "rfl", "rqm" ],
       "tags": []
@@ -251,7 +276,7 @@
       "tags": []
     },
     "bananalauncher": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
 
@@ -269,7 +294,7 @@
       "tags": []
     },
     "shadowshroom": {
-      "mods": [ "vnl", "rfl" ],
+      "mods": [ "vnl", "rfl", "spc" ],
       "tags": []
     },
     "grimrose": {
@@ -279,7 +304,7 @@
 
 
     "snowpea": {
-      "mods": [ "vnl", "auz", "rfl", "rqm" ],
+      "mods": [ "vnl", "auz", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "squash": {
@@ -291,7 +316,7 @@
       "tags": []
     },
     "powerlily": {
-      "mods": [ "vnl", "rfl", "rqm" ],
+      "mods": [ "vnl", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "hypnoshroom": {
@@ -303,7 +328,7 @@
       "tags": []
     },
     "chomper": {
-      "mods": [ "vnl", "rfl", "rqm", "auz" ],
+      "mods": [ "vnl", "rfl", "rqm", "auz", "spc" ],
       "tags": []
     },
     "homingthistle": {
@@ -331,7 +356,7 @@
       "tags": []
     },
     "lavaguava": {
-      "mods": [ "vnl", "rfl", "rqm", "auz" ],
+      "mods": [ "vnl", "rfl", "rqm", "auz", "spc" ],
       "tags": []
     },
     "toadstool": {
@@ -343,7 +368,7 @@
       "tags": []
     },
     "cactus": {
-      "mods": [ "vnl", "rfl", "rqm", "auz" ],
+      "mods": [ "vnl", "rfl", "rqm", "auz", "spc" ],
       "tags": []
     },
     "electricblueberry": {
@@ -387,11 +412,11 @@
       "tags": []
     },
     "applemortar": {
-      "mods": [ "vnl", "rfl", "rqm" ],
+      "mods": [ "vnl", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "witchhazel": {
-      "mods": [ "vnl", "rfl" ],
+      "mods": [ "vnl", "rfl", "spc" ],
       "tags": []
     },
     "parsnip": {
@@ -403,7 +428,7 @@
       "tags": []
     },
     "caulipower": {
-      "mods": [ "vnl", "rfl", "rqm" ],
+      "mods": [ "vnl", "rfl", "rqm", "spc" ],
       "tags": []
     },
     "electricpeashooter": {
@@ -411,14 +436,14 @@
       "tags": []
     },
     "hollybarrier": {
-      "mods": [ "vnl", "rfl", "rqm", "auz" ],
+      "mods": [ "vnl", "rfl", "rqm", "auz", "spc" ],
       "tags": []
     },
 
 
 
     "torchwood": {
-      "mods": [ "vnl", "rfl", "rqm", "auz" ],
+      "mods": [ "vnl", "rfl", "rqm", "auz", "spc" ],
       "tags": []
     },
 
@@ -428,7 +453,7 @@
     },
 
     "dandelion": {
-      "mods": [ "vnl", "rfl", "rqm", "auz" ],
+      "mods": [ "vnl", "rfl", "rqm", "auz", "spc" ],
       "tags": []
     },
 
@@ -583,7 +608,7 @@
     },
 
     "boingsetta": {
-      "mods": [ "vnl", "rfl" ],
+      "mods": [ "vnl", "rfl", "spc" ],
       "tags": []
     },
 
@@ -668,7 +693,7 @@
     },
 
     "bramblebush": {
-      "mods": [ "vnl" ],
+      "mods": [ "vnl", "spc" ],
       "tags": []
     },
 
