@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "PVZ2";
+  src:
+    local("PVZ2"),
+    url("Cafeteria-Bold.otf") format("opentype"),
+}
+
+html {
+    font-family: 'PVZ2', 'helvetica neue', helvetica, arial, sans-serif;
+    font-size: 2rem;
+  }
+  
+  body {
+    width: 800px;
+    margin: 0 auto;
+    background-image: url("images/bg.png");
+    background-size: cover; 
+    background-color: #1e2a61;
+  }
+  
+  p {
+    margin: 0%
+  }
+
+
+  /* header styles */
+  
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  
+  header p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #plantForm {
+    margin: auto;
+    width: 100%;
+    border: 10px solid #1bbd6c;
+    background-color:#0e5e5a;
+    color:white;
+    padding: 10px;
+  }
+
+  #plant {
+    height: 75px;
+    border: 5px solid rgb(0, 247, 255);
+    background-color:rgb(6, 171, 212);
+    color:white;
+    padding: 5px;
+  }
+
+  #results {
+    margin: auto;
+    width: 75%;
+    border: 10px solid rgb(10, 214, 221);
+    background-color:rgb(7, 116, 143);
+    color:rgb(255, 0, 0);
+    padding: 10px;
+  }
+
+  #temp {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: -5px;
+    margin-bottom: 10px;
+  }

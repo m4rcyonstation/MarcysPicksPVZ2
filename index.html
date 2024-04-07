@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Crazy Dave's Picker</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <script>
+
+        //const plantForm = document.getElementById("plantForm");
+        //form.addEventListener("submit", pickPlants);
+
+
+        async function pickPlants(event) {
+            const response = await fetch("/json/plants.json");
+            const allPlants = await response.json();
+            const results = document.getElementById("results");
+            const plantForm = document.getElementById("plantForm");
+
+            let amount = document.getElementById('amount').value;
+            const validPlants = checkPlants(allPlants);
+            
+            results.textContent = null
+
+            if (amount > validPlants.length) {
+                results.textContent = "Error: Too large. Max " + validPlants.length
+                return false;
+            }
+
+            const selectedPlants = [];
+            while (selectedPlants.length < amount) {
+                let selected = randint(0, validPlants.length - 1);
+                if (!selectedPlants.includes(validPlants[selected])) {
+                    selectedPlants.push(validPlants[selected]);
+                }
+            }
+            
+            const old = document.getElementById("temp");
+            console.log(old)
+            if (old) {
+                old.remove();
+            }
+
+            let resultimages = document.createElement("div")
+            resultimages.id = "temp"
+            results.appendChild(resultimages)
+
+            for (plantName in selectedPlants) {
+                let dir = "/images/plants/" + selectedPlants[plantName] + ".png" ;
+                console.log(dir);
+
+                let img = document.createElement("img");
+                img.src = dir
+                img.id = "plant"
+                console.log(img)
+                resultimages.appendChild(img)
+            }
+
+            //results.textContent = selectedPlants;
+            console.log(validPlants);
+        }
+
+        function checkPlants(allPlants) {
+            const validPlants = []
+            const mod = document.getElementById("mod");
+            const ws = document.getElementById("worldspecific");
+
+            console.log(ws.checked)
+
+            for (plant in allPlants.plants) {
+                if (allPlants.plants[plant].mods.includes(mod.options[mod.selectedIndex].id)) {
+                    if (ws.checked == false && !allPlants.plants[plant].tags.includes("worldspecific")) {
+                        validPlants.push(plant);
+                    } else if (ws.checked == true) {
+                        validPlants.push(plant);
+                    }
+                }
+            }
+            return validPlants;
+        }
+
+        function randint(min, max) {
+            const minCeiled = Math.ceil(min);
+            const maxFloored = Math.floor(max);
+            return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
+        }
+
+    </script>
+    <header> crazy dave's picker </header>
+    <body>
+        <div id = "plantForm"> 
+            <form onsubmit="pickPlants();return false;">
+                <p>Mod:     
+                    <select id = "mod" required>
+                        <option id = "vnl">Vanilla</option>
+                        <option id = "rfl">Reflourished</option>
+                        <option id = "auz">Alternate Univerz</option>
+                        <option id = "rqm">Requiem</option>
+                    </select>  
+                    <br>
+                        Amount of plants:
+                    <input type="number" name="amount" min="1" id="amount" required> <br>
+                    <input type="checkbox" id="worldspecific" name="worldspecific">
+                    <label for="worldspecific"> Allow world specific plants? </label>
+                <br>
+                <input type="submit" value="Submit">
+            </p>
+            </form>
+        </div>
+        <div id = "results">
+        </div>
+    </body>
+</html>
