@@ -432,7 +432,7 @@
       "tags": []
     },
 
-    "blooming_heart": {
+    "bloomingheart": {
       "mods": [ "vnl", "rfl", "rqm", "auz" ],
       "tags": []
     },
@@ -532,7 +532,7 @@
       "tags": []
     },
 
-    "ultimato": {
+    "ultomato": {
       "mods": [ "vnl", "rfl", "auz", "rqm" ],
       "tags": []
     },
@@ -828,7 +828,7 @@
 
     "filamint": {
       "mods": [ "vnl" ],
-      "tags": ["mint"]
+      "tags": [ "mint" ]
     },
     "peppermint": {
       "mods": [ "vnl" ],
