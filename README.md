@@ -1,4 +1,4 @@
-# Marcy's PVZ2 Picks v0.60
+# Marcy's PVZ2 Picks v0.68
 
 A website that lets you pick an amount of random plants, from the vanilla game or a mod to help replayability with levels.
 

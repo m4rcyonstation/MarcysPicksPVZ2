@@ -7,84 +7,7 @@
     </head>
     
     <body>
-        <script>
-
-            async function pickPlants(event) {
-                const response = await fetch("https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/json/plants.json");
-                const allPlants = await response.json();
-                const results = document.getElementById("results");
-                const plantForm = document.getElementById("plantForm");
-
-                let amount = document.getElementById('amount').value;
-                const validPlants = checkPlants(allPlants);
-
-                results.textContent = null
-
-                if (amount > validPlants.length) {
-                    results.textContent = "Error: Too large. Max " + validPlants.length
-                    return false;
-                }
-
-                const selectedPlants = [];
-                while (selectedPlants.length < amount) {
-                    let selected = randint(0, validPlants.length - 1);
-                    if (!selectedPlants.includes(validPlants[selected])) {
-                        selectedPlants.push(validPlants[selected]);
-                    }
-                }
-
-                const old = document.getElementById("temp");
-                console.log(old)
-                if (old) {
-                    old.remove();
-                }
-
-                let resultimages = document.createElement("div")
-                resultimages.id = "temp"
-                results.appendChild(resultimages)
-
-                for (plantName in selectedPlants) {
-                    let dir = "https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/images/plants/" + selectedPlants[plantName] + ".png";
-                    console.log(dir);
-
-                    let img = document.createElement("img");
-                    img.src = dir
-                    img.id = "plant"
-                    console.log(img)
-                    resultimages.appendChild(img)
-                }
-
-                //results.textContent = selectedPlants;
-                console.log(validPlants);
-            }
-
-            function checkPlants(allPlants) {
-                const validPlants = []
-                const mod = document.getElementById("mod");
-                const ws = document.getElementById("worldspecific");
-
-                console.log(ws.checked)
-
-                for (plant in allPlants.plants) {
-                    if (allPlants.plants[plant].mods.includes(mod.options[mod.selectedIndex].id)) {
-                        if (ws.checked == false && !allPlants.plants[plant].tags.includes("worldspecific")) {
-                            validPlants.push(plant);
-                        } else if (ws.checked == true) {
-                            validPlants.push(plant);
-                        }
-                    }
-                }
-                return validPlants;
-            }
-
-            function randint(min, max) {
-                const minCeiled = Math.ceil(min);
-                const maxFloored = Math.floor(max);
-                return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
-            }
-
-        </script>
-        <header> Marcy's Picks v0.6</header>
+        <header> Marcy's Picks v0.68</header>
         <div id="plantForm">
             <form onsubmit="pickPlants();return false;">
                 <p>
@@ -99,14 +22,64 @@
                     <br>
                     Amount of plants:
                     <input type="number" name="amount" min="1" id="amount" required> <br>
-                    <input type="checkbox" id="worldspecific" name="worldspecific">
-                    <label for="worldspecific"> Allow world specific plants? </label>
-                    <br>
                     <input type="submit" value="Submit">
                 </p>
+                <button type="button" id="collapsible" onclick="uncollapse()">Advanced [WIP]</button>
+                <div id="collapseContent">
+                    <p> Hey! Tags are fully functioning, but plants may be tagged incorrectly, or not tagged at all. If you wanna help, please feel free to contribute through Github, or contact luc1aonstation on discord.</p>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="whitelist">
+                            <label> Whitelist instead of Blacklist? </label>
+                        </li>
+                        <li><input type="checkbox" id="light"> <label> Light </label></li>
+                        <li><input type="checkbox" id="medium"> <label> Medium </label></li>
+                        <li><input type="checkbox" id="heavy"> <label> Heavy </label></li>
+                        <li>
+                            <input type="checkbox" id="sun" class="tagheader">
+                            <label> Sun Producers </label>
+                            <ul>
+                                <li><input type="checkbox" id="mainsun"> <label> Main Sun Producer </label> </li>
+                                <li><input type="checkbox" id="extrasun"> <label> Extra Sun Producer </label> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="attack" class="tagheader">
+                            <label> Attackers </label>
+                            <ul>
+                                <li><input type="checkbox" id="het"> <label> Straight Shooter </label> </li>
+                                <li><input type="checkbox" id="gay"> <label> Lobber </label> </li>
+                                <li><input type="checkbox" id="close"> <label> Close Range </label> </li>
+                                <li><input type="checkbox" id="support"> <label> Support </label></li>
+                                <li><input type="checkbox" id="aoe"> <label> Area of Effect </label></li>
+                                <li><input type="checkbox" id="single"> <label> Single Target </label></li>
+                                <li><input type="checkbox" id="multi"> <label> Multi-Lane </label></li>
+                                <li><input type="checkbox" id="manual"> <label> Manual </label></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="insta" class="tagheader">
+                            <label> Instant </label>
+                            <ul>
+                                <li><input type="checkbox" id="instadmg"> <label> Damaging </label> </li>
+                                <li><input type="checkbox" id="instastall"> <label> Stall </label> </li>
+                                <li><input type="checkbox" id="mint"> <label> Power-mint </label></li>
+                                <li><input type="checkbox" id="instasilly"> <label> Other </label> </li>
+                                <li><input type="checkbox" id="instaearly"> <label> Early-game </label></li>
+                                <li><input type="checkbox" id="instalate"> <label> Late-game </label></li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox" id="wall"> <label> Wall </label></li>
+                        <li>
+                            <input type="checkbox" id="worldspecific" name="worldspecific" checked> <label> World-Specific </label>
+                        </li>
+                    </ul>
+                </div>
             </form>
+
         </div>
         <div id="results">
         </div>
+        <script src="./script.js"></script>
     </body>
 </html>
