@@ -11,6 +11,8 @@ async function pickPlants(event) {
     let amount = document.getElementById('amount').value;
     const validPlants = checkPlants(allPlants, false);
 
+    
+
     let guarantee = document.getElementById("guaranteesun").checked;
     let validSun = [];
 
@@ -18,6 +20,8 @@ async function pickPlants(event) {
        validSun = checkPlants(allPlants, true);
     }
 
+    console.log(guarantee)
+    console.log(validSun)
 
     results.textContent = null
 
@@ -31,6 +35,7 @@ async function pickPlants(event) {
     if (guarantee) {
         let selected = randint(0, validSun.length - 1);
         selectedPlants.push(validSun[selected]);
+        console.log(validSun[selected])
     }
 
     while (selectedPlants.length < amount) {
