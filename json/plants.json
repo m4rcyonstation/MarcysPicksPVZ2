@@ -409,7 +409,12 @@
     },
     "homingthistle": {
       "mods": [ "vnl", "rfl", "rqm", "auz" ],
-      "tags": { "all": ["multi", "heavy", "single"] }
+      "tags": {
+        "all": [ "multi", "single" ],
+        "any": [ "medium" ],
+        "auz": [ "heavy" ],
+        "rqm": [ "heavy" ]
+      }
     },
     "ghostpepper": {
       "mods": [ "vnl", "rfl", "rqm", "auz" ],
@@ -430,9 +435,10 @@
     "firepeashooter": {
       "mods": [ "vnl", "rfl", "rqm", "auz" ],
       "tags": {
-        "all": ["het"],
+        "all": [ "het" ],
         "any": [ "heavy", "aoe" ],
-        "vnl":  ["medium", "single"]
+        "vnl": [ "medium", "single" ],
+        "rfl": [ "medium", "aoe" ]
       }
     },
     "lavaguava": {
@@ -489,7 +495,7 @@
     },
     "goldbloom": {
       "mods": [ "vnl", "rfl" ],
-      "tags": { "all": ["extrasun", "instaearly", "instasilly"] }
+      "tags": { "all": ["extrasun", "instasilly"] }
     },
     "electriccurrant": {
       "mods": [ "vnl", "rfl", "rqm", "auz" ],
@@ -506,8 +512,9 @@
     "kiwibeast": {
       "mods": [ "vnl", "rfl", "rqm", "auz" ],
       "tags": {
-        "all": ["close", "aoe"],
+        "all": [ "close", "aoe" ],
         "vnl": [ "medium" ],
+        "rfl": [ "medium" ],
         "any": [ "heavy" ]
       }
     },
@@ -633,8 +640,9 @@
     "dazeychain": {
       "mods": [ "vnl", "rfl", "auz", "rqm" ],
       "tags": {
-        "all": ["support", "heavy"],
-        "any": ["het"],
+        "all": ["support"],
+        "any": [ "het", "heavy" ],
+        "vnl":  ["het", "light"],
         "rqm":  ["close"]
       }
     },
@@ -644,7 +652,7 @@
       "tags": {
         "all": [ "instadmg", "instaearly" ],
         "any": [ "aoe", "close" ],
-        "auz":  []
+        "auz":  [""]
       }
     },
 
@@ -710,7 +718,7 @@
 
     "olivepit": {
       "mods": [ "vnl", "rfl", "auz" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["close"] }
     },
 
     "puffball": {
@@ -719,8 +727,8 @@
     },
 
     "explodeovine": {
-      "mods": [ "vnl", "rfl", "auz" ],
-      "tags": { "all": [] }
+      "mods": [ "vnl", "auz" ],
+      "tags": { "all": ["wall", "instadmg", "instalate"] }
     },
 
     "murkadamianut": {

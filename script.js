@@ -13,15 +13,17 @@ async function pickPlants(event) {
 
     
 
-    let guarantee = document.getElementById("guaranteesun").checked;
+    let guaranteeSun = document.getElementById("guaranteesun").checked;
     let validSun = [];
 
-    if (guarantee) {
-       validSun = checkPlants(allPlants, true);
+    if (guaranteeSun) {
+       validSun = checkPlants(allPlants, "mainsun");
     }
 
-    console.log(guarantee)
-    console.log(validSun)
+    let guaranteeInsta = document.getElementById("guaranteeearly").checked;
+    if (guaranteeInsta) {
+        validInstas = checkPlants(allPlants, "instaearly");
+    }
 
     results.textContent = null
 
@@ -32,10 +34,16 @@ async function pickPlants(event) {
 
     const selectedPlants = [];
 
-    if (guarantee) {
+    if (guaranteeSun) {
         let selected = randint(0, validSun.length - 1);
         selectedPlants.push(validSun[selected]);
         console.log(validSun[selected])
+    }
+
+    if (guaranteeInsta) {
+        let selected = randint(0, validInstas.length - 1);
+        selectedPlants.push(validInstas[selected]);
+        console.log(validInstas[selected])
     }
 
     while (selectedPlants.length < amount) {
@@ -84,7 +92,7 @@ function checkPlants(allPlants, guarantee) {
         let isItValid = true;
 
         if (currentPlant.mods.includes(modId)) {
-            if (!guarantee) { //checking normally
+            if (guarantee == false) { //checking normally
                 for (tag in tagsSelected) {
                     if (currentPlant.tags["all"] != null && currentPlant.tags["all"].includes(tagsSelected[tag])) { //if blacklisted tag in "all", blacklist
                         isItValid = false;
@@ -102,13 +110,13 @@ function checkPlants(allPlants, guarantee) {
                 }
             } else { //STUPID DUMB WAY OF DOING THIS
                 isItValid = false;
-                if (currentPlant.tags["all"] != null && currentPlant.tags["all"].includes("mainsun")) {
+                if (currentPlant.tags["all"] != null && currentPlant.tags["all"].includes(guarantee)) {
                     isItValid = true;
                 }
-                else if (currentPlant.tags[modId] != null && currentPlant.tags[modId].includes("mainsun")) { 
+                else if (currentPlant.tags[modId] != null && currentPlant.tags[modId].includes(guarantee)) { 
                     isItValid = true;
                 }
-                else if (currentPlant.tags[modId] == null && currentPlant.tags["any"] != null && currentPlant.tags["any"].includes("mainsun")) { 
+                else if (currentPlant.tags[modId] == null && currentPlant.tags["any"] != null && currentPlant.tags["any"].includes(guarantee)) { 
                     isItValid = true;
                 }
             }
