@@ -1,4 +1,7 @@
 
+
+
+preload_images();
 async function pickPlants(event) {
     const response = await fetch("https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/json/plants.json");
     const allPlants = await response.json();
@@ -6,7 +9,17 @@ async function pickPlants(event) {
     const plantForm = document.getElementById("plantForm");
 
     let amount = document.getElementById('amount').value;
-    const validPlants = checkPlants(allPlants);
+    const validPlants = checkPlants(allPlants, false);
+
+    
+
+    let guarantee = document.getElementById("guaranteesun").checked;
+    let validSun = [];
+
+    if (guarantee) {
+       validSun = checkPlants(allPlants, true);
+    }
+
 
     results.textContent = null
 
@@ -16,6 +29,12 @@ async function pickPlants(event) {
     }
 
     const selectedPlants = [];
+
+    if (guarantee) {
+        let selected = randint(0, validSun.length - 1);
+        selectedPlants.push(validSun[selected]);
+    }
+
     while (selectedPlants.length < amount) {
         let selected = randint(0, validPlants.length - 1);
         if (!selectedPlants.includes(validPlants[selected])) {
@@ -44,7 +63,7 @@ async function pickPlants(event) {
     //results.textContent = selectedPlants;
 }
 
-function checkPlants(allPlants) {
+function checkPlants(allPlants, guarantee) {
     const validPlants = []
     const mod = document.getElementById("mod");
     const modId = mod.options[mod.selectedIndex].id
@@ -62,21 +81,35 @@ function checkPlants(allPlants) {
         let isItValid = true;
 
         if (currentPlant.mods.includes(modId)) {
-            for (tag in tagsSelected) {  
-                if (currentPlant.tags["all"] != null && currentPlant.tags["all"].includes(tagsSelected[tag])) { //if blacklisted tag in "all", blacklist
-                    isItValid = false;
-                } 
-                else if (currentPlant.tags[modId] != null && currentPlant.tags[modId].includes(tagsSelected[tag])) { //If current plant has a tag category for current mod and blacklisted tag is in there, blacklist
-                    isItValid = false;
-                } 
-                else if (currentPlant.tags[modId] == null && currentPlant.tags["any"] != null && currentPlant.tags["any"].includes(tagsSelected[tag])) { //if current plant DOESN'T have a tag category, but has an "any" category, and blacklisted tag is in "any""
-                    isItValid = false;
-                } 
-            }
+            if (!guarantee) { //checking normally
+                for (tag in tagsSelected) {
+                    if (currentPlant.tags["all"] != null && currentPlant.tags["all"].includes(tagsSelected[tag])) { //if blacklisted tag in "all", blacklist
+                        isItValid = false;
+                    }
+                    else if (currentPlant.tags[modId] != null && currentPlant.tags[modId].includes(tagsSelected[tag])) { //If current plant has a tag category for current mod and blacklisted tag is in there, blacklist
+                        isItValid = false;
+                    }
+                    else if (currentPlant.tags[modId] == null && currentPlant.tags["any"] != null && currentPlant.tags["any"].includes(tagsSelected[tag])) { //if current plant DOESN'T have a tag category, but has an "any" category, and blacklisted tag is in "any""
+                        isItValid = false;
+                    }
+                }
 
-            if (tagsSelected.includes("whitelist")) {
-                isItValid = !isItValid;
+                if (tagsSelected.includes("whitelist")) {
+                    isItValid = !isItValid;
+                }
+            } else { //STUPID DUMB WAY OF DOING THIS
+                isItValid = false;
+                if (currentPlant.tags["all"] != null && currentPlant.tags["all"].includes("mainsun")) {
+                    isItValid = true;
+                }
+                else if (currentPlant.tags[modId] != null && currentPlant.tags[modId].includes("mainsun")) { 
+                    isItValid = true;
+                }
+                else if (currentPlant.tags[modId] == null && currentPlant.tags["any"] != null && currentPlant.tags["any"].includes("mainsun")) { 
+                    isItValid = true;
+                }
             }
+            
         } else {
             isItValid = false; //dont allow plants not in mod
         }
@@ -158,4 +191,13 @@ for (let x = 0; x < checkboxes.length; x++) {
     });
 }
 
-//ok smart stuff done back to stupid code
+async function preload_images() {
+    const response = await fetch("https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/json/plants.json");
+    const allPlants = await response.json();
+    const validPlants = checkPlants(allPlants, false);
+    for (plant in validPlants) {
+        let dir = "https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/images/plants/" + validPlants[plant] + ".png";
+        let img = new Image();
+        img.src = dir;
+    }
+}
