@@ -11,8 +11,6 @@ async function pickPlants(event) {
     let amount = document.getElementById('amount').value;
     const validPlants = checkPlants(allPlants, false);
 
-    
-
     let guarantee = document.getElementById("guaranteesun").checked;
     let validSun = [];
 
