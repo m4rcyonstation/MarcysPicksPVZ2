@@ -658,7 +658,7 @@
 
     "blastberryvine": {
       "mods": [ "vnl", "rfl", "auz" ],
-      "tags": { "all": ["gay", "light", "aoe"] }
+      "tags": { "all": ["gay", "medium", "aoe"] }
     },
 
     "pokra": {
@@ -683,47 +683,57 @@
 
     "pyrevine": {
       "mods": [ "vnl", "rfl" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "close", "aoe" ],
+        "vnl": [ "light" ],
+        "rfl":  ["medium"]
+      }
     },
 
     "icebloom": {
       "mods": [ "vnl", "rfl", "auz", "rqm" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["instastall", "instalate"] }
     },
 
     "dartichoke": {
       "mods": [ "vnl", "rfl", "rqm" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["medium", "multi", "single"] }
     },
 
     "ultomato": {
       "mods": [ "vnl", "rfl", "auz", "rqm" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "heavy", "single", "het" ]
+      }
     },
 
     "gumnut": {
       "mods": [ "vnl", "rfl", "auz", "rqm" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["instastall", "wall", "instalate"] }
     },
 
     "shinevine": {
       "mods": [ "vnl", "rfl", "rqm" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["extrasun", "medium"] }
     },
 
     "tumbleweed": {
       "mods": [ "vnl", "rfl", "rqm" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["instadmg", "instastall", "instalate"] }
     },
 
     "olivepit": {
       "mods": [ "vnl", "rfl", "auz" ],
-      "tags": { "all": ["close"] }
+      "tags": {
+        "all": [ "close", "support", "single" ],
+        "auz": [ "heavy" ],
+        "any":  ["medium"]
+      }
     },
 
     "puffball": {
       "mods": [ "vnl", "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["instadmg", "instalate"] }
     },
 
     "explodeovine": {
@@ -733,219 +743,266 @@
 
     "murkadamianut": {
       "mods": [ "vnl", "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["wall", "close", "aoe", "medium"] }
     },
 
     "turkeypult": {
       "mods": [ "vnl", "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["light", "gay", "aoe"] }
     },
 
     "headbutterlettuce": {
       "mods": [ "vnl", "rfl", "rqm" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["medium", "support", "close", "aoe"] }
     },
 
     "boingsetta": {
       "mods": [ "vnl", "rfl", "spc" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "support", "aoe" ],
+        "any": [ "instastall", "instalate" ],
+        "spc": ["close", "light"]
+
+      }
     },
 
     "stickybombrice": {
       "mods": [ "vnl", "rfl", "rqm" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "medium", "gay", "aoe" ],
+        "any": [ "multi" ],
+        "rqm": []
+      }
     },
 
     "hocuscrocus": {
       "mods": [ "vnl", "rfl", "rqm", "auz" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "medium", "single" ],
+        "any": [ "multi", "support"],
+        "rqm": ["het"]
+      }
     },
 
     "gloomvine": {
       "mods": [ "vnl", "rfl", "rqm" ],
-      "tags": { "all": [] }
+      "tags": {
+        "vnl": [ "close", "aoe", "multi", "light" ],
+        "rqm": [ "close", "aoe", "heavy"],
+        "rfl": ["worldspecific", "support"]
+      }
     },
 
     "draftodil": {
       "mods": [ "vnl", "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["support", "het", "light"] }
     },
 
     "boomballoonflower": {
       "mods": [ "vnl", "rfl", "auz" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["manual", "heavy", "aoe", "multi"] }
     },
 
     "peavine": {
       "mods": [ "vnl", "rfl", "rqm" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "single", "het" ],
+        "any": [ "medium" ],
+        "vnl": ["light", "support"]
+      }
     },
 
     "inferno": {
       "mods": [ "vnl", "rfl", "auz" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "support", "het", "aoe" ],
+        "rfl": [ "heavy" ],
+        "any": [ "medium" ]
+      }
     },
 
     "solarsage": {
       "mods": [ "vnl", "rfl", "rqm" ],
-      "tags": { "all": [] }
+      "tags": {
+        "any": [ "instasilly", "instadmg", "extrasun" ],
+        "rqm": ["medium", "extrasun", "het", "single"]
+      }
     },
 
     "powervine": {
       "mods": [ "vnl", "auz" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "single", "het" ],
+        "vnl": [ "light" ],
+        "auz": ["medium"]
+
+      }
     },
 
     "noctarine": {
       "mods": [ "vnl", "rfl", "rqm" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "instasilly", "instalate" ],
+        "any": [ "instadmg", "instastall" ],
+        "rqm": [""]
+      }
     },
 
     "heathseeker": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["instadmg", "instalate"] }
     },
 
     "iceweed": {
       "mods": [ "vnl", "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["close", "support", "aoe", "medium"] }
     },
 
     "tigergrass": {
       "mods": [ "vnl", "auz", "rqm" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "single", "close" ],
+        "any": [ "heavy" ],
+        "vnl": ["light"]
+      }
     },
 
     "teleportatomine": {
       "mods": [ "vnl", "auz", "rqm", "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["instadmg", "instalate"] }
     },
 
     "blockoli": {
       "mods": [ "vnl", "auz" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["wall", "support", "close", "medium"] }
     },
 
     "buttercup": {
       "mods": [ "vnl", "auz" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["support", "wall", "light", "close"] }
     },
 
     "bramblebush": {
       "mods": [ "vnl", "spc" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["support", "close", "light"] }
     },
 
     "rhubarbarian": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["close", "light", "instadmg", "instalate"] }
     },
 
     "megagatlingpea": {
       "mods": [ "vnl", "rqm" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "heavy", "single", "het" ]
+      }
     },
 
     "levitater": {
       "mods": [ "vnl", "rqm" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["support", "light", "single"] }
     },
 
     "tombtangler": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["wall", "worldspecific"] }
     },
 
     "vamporcini": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["wall", "medium"] }
     },
 
     "meteorflower": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["aoe", "medium"] }
     },
 
     "chillypepper": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["instadmg", "instastall"] }
     },
 
     "bunchi": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["close", "manual", "light", "support"] }
     },
 
     "bzzzbutton": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["instadmg", "instaearly"] }
     },
 
     "boomberry": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["gay", "aoe", "medium"] }
     },
 
     "maybee": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["close", "heavy", "aoe"] }
     },
 
     "seaflora": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["worldspecific", "multi", "aoe", "het"] }
     },
 
     "scaredyshroom": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["het", "light", "single"] }
     },
 
     "bamboospartan": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["close", "medium", "aoe"] }
     },
 
     "sundewtangler": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["support", "wall", "extrasun", "light"] }
     },
 
     "beansprout": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["wall", "close", "single", "light"] }
     },
 
     "nightcap": {
       "mods": [ "vnl", "auz" ],
-      "tags": { "all": [] }
+      "tags": {
+        "all": [ "aoe", "close" ],
+        "auz": [ "medium" ],
+        "vnl": ["heavy"]
+      }
     },
 
     "buduhboom": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["instadmg", "instalate"] }
     },
 
     "iceshroom": {
       "mods": [ "vnl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["close", "support", "medium", "aoe"] }
     },
 
 
 
     "cattail": {
       "mods": [ "auz", "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["multi", "close", "single", "medium"] }
     },
 
     "maypopmechanic": {
       "mods": [ "auz", "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["manual", "medium", "aoe"] }
     },
 
     "voidorchid": {
       "mods": [ "vnl", "rfl" ],
-      "tags": { "all": ["mint"] }
+      "tags": { "all": ["heavy", "single", "wall"] }
     },
 
 
@@ -953,51 +1010,51 @@
 
     "submergemint": {
       "mods": [ "auz" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["mint", "instadmg", "instasilly"] }
     },
 
     "acidlemon": {
       "mods": [ "auz" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["het", "medium", "single"] }
     },
 
 
 
     "sunurchin": {
       "mods": [ "rqm" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["instadmg", "instaearly", "extrasun"] }
     },
 
     "wheatslinger": {
       "mods": [ "rqm" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["gay", "aoe", "light"] }
     },
 
     "crystallshroom": {
       "mods": [ "rqm" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["manual", "het", "aoe", "support", "medium"] }
     },
 
 
 
     "lilyofalchemy": {
       "mods": [ "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["gay", "single", "medium"] }
     },
 
     "lotusroot": {
       "mods": [ "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["close", "heavy", "single"] }
     },
 
     "fanilla": {
       "mods": [ "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["aoe", "het", "support"] }
     },
 
     "flameweed": {
       "mods": [ "rfl" ],
-      "tags": { "all": [] }
+      "tags": { "all": ["close", "medium", "aoe"] }
     },
 
 
