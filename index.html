@@ -9,21 +9,22 @@
 </head>
     
     <body>
-        <header> Marcy's Picks v0.70</header>
+        <header> Marcy's Picks v0.75</header>
         <div id="plantForm">
             <form onsubmit="pickPlants();return false;">
                 <p>
                     Mod:
-                    <select id="mod" required>
+                    <select id="mod" required onchange="addTags()">
                         <option id="vnl">Vanilla</option>
                         <option id="rfl">Reflourished</option>
                         <option id="auz">Alternate Univerz</option>
                         <option id="rqm">Requiem</option>
                         <option id="spc">Spice</option>
+                        <option id="gt0">Grind Thousand</option>
                     </select>
                     <br>
                     Amount of plants:
-                    <input type="number" name="amount" min="1" id="amount" required> <br>
+                    <input type="number" name="amount" min="1" id="amount" required value="3"> <br>
                     <input type="submit" value="Submit">
                 </p>
                 <button type="button" id="collapsible" onclick="uncollapse()">Advanced [WIP]</button>
@@ -38,7 +39,7 @@
                             <label> Whitelist instead of Blacklist? </label>
                         </li>
                         <li>
-                            <ul>
+                            <ul id="maintag">
                                 <li>
                                     <input type="checkbox" id="worldspecific" name="worldspecific" checked> <label> World-Specific </label>
                                 </li>

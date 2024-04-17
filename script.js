@@ -2,8 +2,11 @@
 
 
 preload_images();
+addTags();
+
 async function pickPlants(event) {
-    const response = await fetch("https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/json/plants.json");
+    //const response = await fetch("https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/json/plants.json");
+    const response = await fetch("./json/plants.json");
     const allPlants = await response.json();
     const results = document.getElementById("results");
     const plantForm = document.getElementById("plantForm");
@@ -68,6 +71,7 @@ async function pickPlants(event) {
         let img = document.createElement("img");
         img.src = dir
         img.id = "plant"
+
         resultimages.appendChild(img)
     }
 
@@ -149,6 +153,40 @@ function uncollapse() {
         content.style.display = "block";
     }
 }
+
+function addTags() {
+    const mainTagList = document.getElementById("maintag");
+    const mod = document.getElementById("mod");
+    const modId = mod.options[mod.selectedIndex].id
+    let tiers = 0;
+
+    while (mainTagList.lastElementChild.className == "modtag") {
+        mainTagList.lastElementChild.remove();
+    }
+
+    if (modId == "gt0") {
+        tiers = 6
+    }
+
+    for (let i = 1; i <= tiers; i++) {
+        let Ctier = document.createElement("li")
+        Ctier.className = "modtag";
+
+        CTinput = document.createElement("input");
+        CTinput.type = "checkbox";
+        CTinput.id = "t" + i;
+
+        Ctier.appendChild(CTinput);
+
+        CTlabel = document.createElement("label");
+        CTlabel.textContent = "Tier " + i
+
+        Ctier.appendChild(CTlabel)
+
+        mainTagList.appendChild(Ctier)
+    }
+}
+
 
 //THANKS chriscoyier SORRY FOR STEALING UR CODE DIRECTLY I CBA TO DO THIS TY I LOVE YOU
 //CODE SOURCE: https://codepen.io/chriscoyier/pen/GRKvyPJ/
