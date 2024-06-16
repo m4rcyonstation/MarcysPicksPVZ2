@@ -275,7 +275,7 @@
       }
     },
     "goldleaf": {
-      "mods": [ "vnl", "auz", "rfl", "gt0" ],
+      "mods": [ "vnl", "auz", "rqm", "rfl", "gt0" ],
       "tags": {
         "all": [ "extrasun", "medium" ],
         "gt0": [ "t4" ]
@@ -662,7 +662,7 @@
         "all": [ "aoe", "het" ],
         "any": [ "light" ],
         "gt0": [ "t5", "close", "medium" ],
-        "rqm": ["close", "medium"]
+        "rqm": [ "close", "medium" ]
       }
     },
     "electricblueberry": {
@@ -683,7 +683,7 @@
       }
     },
     "grapeshot": {
-      "mods": [ "vnl", "rfl", "rqm", "auz", "gt0" ],
+      "mods": [ "vnl", "rfl", "rqm", "auz", "gt0", "rqm" ],
       "tags": {
         "all": [ "instadmg", "instalate" ],
         "gt0": [ "t4" ]
@@ -711,7 +711,7 @@
       }
     },
     "goldbloom": {
-      "mods": [ "vnl", "rfl", "gt0" ],
+      "mods": [ "vnl", "rfl", "gt0", "rqm" ],
       "tags": {
         "all": [ "extrasun", "instasilly" ],
         "gt0": [ "t5" ]
@@ -840,7 +840,7 @@
       "tags": {
         "all": [ "wall", "instadmg", "instalate" ],
         "any": [ "medium" ],
-        "rqm": ["instaearly"],
+        "rqm": [ "instaearly" ],
         "gt0": [ "t5", "heavy" ]
       }
     },
@@ -905,7 +905,7 @@
       "mods": [ "vnl", "rfl", "gt0" ],
       "tags": {
         "all": [ "single", "het" ],
-        "any": ["medium"],
+        "any": [ "medium" ],
         "gt0": [ "t5", "heavy" ]
       }
     },
@@ -1347,6 +1347,10 @@
       "tags": { "all": [ "manual", "het", "aoe", "support", "medium" ] }
     },
 
+    "solarworthia": {
+      "mods": [ "rqm" ],
+      "tags": { "all": [ "heavy", "multi", "close", "support", "medium" ] }
+    },
 
 
     "lilyofalchemy": {
@@ -1372,8 +1376,8 @@
     "gt0gatlingpea": {
       "mods": [ "gt0" ],
       "tags": {
-        "all": [ "heavy", "het", "single"],
-        "gt0": ["t5"]
+        "all": [ "heavy", "het", "single" ],
+        "gt0": [ "t5" ]
       }
     },
 
@@ -1381,7 +1385,7 @@
       "mods": [ "gt0" ],
       "tags": {
         "all": [ "instalate", "instadmg" ],
-        "gt0": ["t6"]
+        "gt0": [ "t6" ]
       }
     },
 
@@ -1464,7 +1468,7 @@
       "mods": [ "vnl", "gt0" ],
       "tags": {
         "all": [ "mint", "instalate", "instadmg" ],
-        "gt0": ["t5"]
+        "gt0": [ "t5" ]
       }
     },
     "appeasemint": {
@@ -1472,7 +1476,7 @@
       "tags": { "all": [ "mint", "instadmg" ] }
     }
 
-    
+
 
   }
 }
