@@ -5,8 +5,8 @@ preload_images();
 addTags();
 
 async function pickPlants(event) {
-    //const response = await fetch("https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/json/plants.json");
-    const response = await fetch("./json/plants.json");
+    const response = await fetch("https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/json/plants.json");
+    //const response = await fetch("./json/plants.json");
     const allPlants = await response.json();
     const results = document.getElementById("results");
     const plantForm = document.getElementById("plantForm");

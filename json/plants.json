@@ -31,7 +31,7 @@
     "cabbagepult": {
       "mods": [ "vnl", "auz", "rfl", "rqm", "spc", "gt0" ],
       "tags": {
-        "all": [ "lobber", "light", "single" ],
+        "all": [ "gay", "light", "single" ],
         "gt0": [ "t1" ]
       }
     },
@@ -1300,6 +1300,46 @@
       "tags": { "all": [ "close", "support", "medium", "aoe" ] }
     },
 
+    "seashroom": {
+      "mods": [ "vnl" ],
+      "tags": { "all": [ "worldspecific", "light", "het", "close", "aoe" ] }
+    },
+
+    "guardshroom": {
+      "mods": [ "vnl" ],
+      "tags": { "all": [ "close", "support", "medium" ] }
+    },
+
+    "aquavine": {
+      "mods": [ "vnl" ],
+      "tags": { "all": [ "het", "support", "light", "aoe" ] }
+    },
+
+    "mangofier": {
+      "mods": [ "vnl" ],
+      "tags": { "all": [ "light", "gay", "multi", "manual", "single" ] }
+    },
+
+    "blastspinner": {
+      "mods": [ "vnl" ],
+      "tags": { "all": [ "light", "gay", "support", "aoe" ] }
+    },
+
+    "doomshroom": {
+      "mods": [ "vnl" ],
+      "tags": { "all": [ "instalate", "instadmg", "instaearly"] }
+    },
+
+    "blazeleaf": {
+      "mods": [ "vnl" ],
+      "tags": { "all": [ "light", "aoe", "close", "het"] }
+    },
+
+    "frostbonnet": {
+      "mods": [ "vnl" ],
+      "tags": { "all": [ "light", "manual", "support", "aoe", "close" ] }
+    },
+
 
 
     "cattail": {
@@ -1381,7 +1421,7 @@
       }
     },
 
-    "doomshroom": {
+    "gt0doomshroom": {
       "mods": [ "gt0" ],
       "tags": {
         "all": [ "instalate", "instadmg" ],
