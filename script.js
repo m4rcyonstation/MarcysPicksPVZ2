@@ -10,6 +10,10 @@ async function pickPlants(event) {
     const allPlants = await response.json();
     const results = document.getElementById("results");
     const plantForm = document.getElementById("plantForm");
+    
+    const mod = document.getElementById("mod");
+    const modId = mod.options[mod.selectedIndex].id
+
 
     let amount = document.getElementById('amount').value;
     const validPlants = checkPlants(allPlants, false);
@@ -66,7 +70,13 @@ async function pickPlants(event) {
     results.appendChild(resultimages)
 
     for (plantName in selectedPlants) {
-        let dir = "https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/images/plants/" + selectedPlants[plantName] + ".png";
+        let dir
+        if (modId == "auz" || modId == "vnl") {
+            dir = "https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/images/plants/" + modId + selectedPlants[plantName] + ".png";
+
+        } else {
+            dir = "https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/images/plants/" + "vnl" + selectedPlants[plantName] + ".png";
+        }
 
         let img = document.createElement("img");
         img.src = dir
