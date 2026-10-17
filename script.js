@@ -72,10 +72,10 @@ async function pickPlants(event) {
     for (plantName in selectedPlants) {
         let dir
         if (modId == "auz" || modId == "vnl") {
-            dir = "https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/images/plants/" + modId + selectedPlants[plantName] + ".png";
+            dir = "https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/images/plants/" + modId + "/" + selectedPlants[plantName] + ".png";
 
         } else {
-            dir = "https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/images/plants/" + "vnl" + selectedPlants[plantName] + ".png";
+            dir = "https://raw.githubusercontent.com/m4rcyonstation/MarcysPicksPVZ2/main/images/plants/" + "vnl/" + selectedPlants[plantName] + ".png";
         }
 
         let img = document.createElement("img");
