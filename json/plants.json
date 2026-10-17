@@ -606,7 +606,7 @@
     "sweetpotato": {
       "mods": [ "vnl", "rfl", "rqm", "auz", "gt0" ],
       "tags": {
-        "all": [ "wall" ],
+        "all": [ "wall", "medium" ],
         "gt0": [ "t3" ]
       }
     },
@@ -744,7 +744,7 @@
       }
     },
     "applemortar": {
-      "mods": [ "vnl", "rfl", "rqm", "spc" ],
+      "mods": [ "vnl", "rfl", "rqm", "spc", "auz" ],
       "tags": {
         "all": [ "heavy", "multi", "gay" ],
         "vnl": [ "support" ],
@@ -776,7 +776,7 @@
       }
     },
     "caulipower": {
-      "mods": [ "vnl", "rfl", "rqm", "spc", "gt0" ],
+      "mods": [ "vnl", "rfl", "rqm", "spc", "gt0", "auz" ],
       "tags": {
         "all": [ "heavy", "multi", "single" ],
         "gt0": [ "t5" ]
@@ -854,7 +854,7 @@
     },
 
     "bombegranate": {
-      "mods": [ "vnl", "rfl", "rqm", "gt0" ],
+      "mods": [ "vnl", "rfl", "rqm", "gt0", "auz" ],
       "tags": {
         "all": [ "instadmg", "instalate" ],
         "gt0": [ "t4" ]
@@ -1063,23 +1063,24 @@
     },
 
     "boingsetta": {
-      "mods": [ "vnl", "rfl", "spc", "gt0" ],
+      "mods": [ "vnl", "rfl", "spc", "gt0", "auz" ],
       "tags": {
         "all": [ "support", "aoe" ],
         "any": [ "instastall", "instalate" ],
         "gt0": [ "t3", "instastall", "instalate" ],
-        "spc": [ "close", "light" ]
-
+        "spc": [ "close", "light" ],
+        "auz": ["medium"]
       }
     },
 
     "stickybombrice": {
-      "mods": [ "vnl", "rfl", "rqm", "gt0" ],
+      "mods": [ "vnl", "rfl", "rqm", "gt0", "auz" ],
       "tags": {
         "all": [ "gay", "aoe" ],
         "any": [ "multi", "medium" ],
         "rqm": [ "medium" ],
-        "gt0": [ "t5", "heavy", "multi" ]
+        "gt0": [ "t5", "heavy", "multi" ],
+        "auz": ["multi", "heavy"]
       }
     },
 
@@ -1514,8 +1515,67 @@
     "appeasemint": {
       "mods": [ "vnl" ],
       "tags": { "all": [ "mint", "instadmg" ] }
+    },
+
+    "scaraberry": {
+      "mods": ["auz"],
+      "tags": {"all": ["instaearly", "instadmg"]}
+    },
+
+    "skyshooter": {
+      "mods": ["auz"],
+      "tags": {"all": ["medium", "het", "manual"]}
+    },
+
+    "dillsergeant": {
+      "mods": ["auz"],
+      "tags": {"all": ["support", "light"]}
+    },
+    
+    "parawhin": {
+      "mods": ["auz"],
+      "tags": {"all": ["wall", "close", "support", "medium"]}
+    },
+
+    "securitygourds": {
+      "mods": ["auz"],
+      "tags": {"all": ["instalate", "instadmg", "medium"]}
+    },
+    
+    "carrotillery": {
+      "mods": ["auz"],
+      "tags": {"all": ["heavy", "manual", "aoe"]}
+    },
+
+    "poppinpoppies": {
+      "mods": ["auz"],
+      "tags": {"all": ["wall", "support", "instalate", "instasilly"]}
+    },
+    
+    "spicetea": {
+      "mods": ["auz"],
+      "tags": {"all": ["wall", "support", "extrasun"]}
+    },
+
+    "eggurt": {
+      "mods": ["auz"],
+      "tags": {"all": ["instalate", "instadmg", "manual", "instastall"]}
+    },
+
+    "kiwikong": {
+      "mods": ["auz"],
+      "tags": {"all": ["medium", "het", "aoe"]}
+    },
+
+    "pulpergeist": {
+      "mods": ["auz"],
+      "tags": {"all": ["medium", "gay", "aoe"]}
     }
 
+
+
+    
+    
 
 
   }
